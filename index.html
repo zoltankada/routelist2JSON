@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 33.3%;
+            padding: 10px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        input {
+            width: 100%;
+            height: 100%;
+        }
+
+        textarea {
+            width: 100%;
+            height: 400px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 0px;
+        }
+
+        .buttonwrapper {
+            text-align: center;
+        }
+
+        #convert {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>RouteList2JSON Converter</h1>
+<div class="row">
+    <div class="column">
+        <h2>Current JSON</h2>
+        <p>if exists</p>
+        <textarea id="oldJSON" type="text"></textarea>
+    </div>
+    <div class="column">
+        <h2>Routelist</h2>
+        <p>separated by tabulators</p>
+        <textarea id="routeList" type="text"></textarea>
+    </div>
+    <div class="column">
+        <h2>Your brand new JSON</h2>
+        <p>enjoy :)</p>
+        <textarea id="resultJSON"></textarea>
+    </div>
+</div>
+<div class="buttonwrapper">
+    <button id="convert" onclick="convert2JSON()">Convert</button>
+</div>
+
+<script src="routelist2JSON.js"></script>
+</body>
+</html>
